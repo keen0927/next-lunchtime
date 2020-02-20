@@ -1,10 +1,23 @@
-import Header from '../components/header';
+import Layout from '../components/Layout';
+import Link from 'next/link';
+
+const PostLink = props => (
+    <li>
+        <Link href={`/post?title=${props.title}`}>
+            <a>{props.title}</a>
+        </Link>
+    </li>
+);
 
 export default function Index() {
     return (
-        <div>
-            <Header />
-            <p>Home</p>
-        </div>
+        <Layout>
+            <h1>Posts</h1>
+            <ul>
+                <PostLink title="Hello Next.js" />
+                <PostLink title="Learn" />
+                <PostLink title="Next" />
+            </ul>
+        </Layout>
     )
 }
