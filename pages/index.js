@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const PostLink = props => (
     <li>
-        <Link href={`/post?title=${props.title}`}>
-            <a>{props.title}</a>
+        <Link href="/p/[id]" as={`/p/${props.id}`}>
+            <a>{props.id}</a>
         </Link>
     </li>
 );
@@ -14,9 +14,9 @@ export default function Index() {
         <Layout>
             <h1>Posts</h1>
             <ul>
-                <PostLink title="Hello Next.js" />
-                <PostLink title="Learn" />
-                <PostLink title="Next" />
+                <PostLink id="1" />
+                <PostLink id="2" />
+                <PostLink id="3" />
             </ul>
         </Layout>
     )
