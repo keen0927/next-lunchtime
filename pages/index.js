@@ -35,6 +35,20 @@ const Index = props => (
                 </li>
             ))}
         </ul>
+        <style jsx>{`
+            li {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            a {
+                color: rgba(0,0,0,0.87);
+                transition: color 0.5s;
+            }
+            a:hover {
+                color: pink;
+            }
+        `}</style>
     </Layout>
 );
 
